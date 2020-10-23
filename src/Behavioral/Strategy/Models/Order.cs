@@ -19,14 +19,15 @@ namespace Strategy.Models
 
         public ISalesTaxStrategy SalesTaxStrategy { get; set; }
 
-        public decimal GetTax()
+        public decimal GetTax(ISalesTaxStrategy salesTaxStrategy = default)
         {
-            if (this.SalesTaxStrategy == null)
+            var strategy = salesTaxStrategy ?? this.SalesTaxStrategy;
+            if (strategy == null)
             {
                 throw new NullReferenceException($"{nameof(SalesTaxStrategy)} is not provided");
             }
 
-            return this.SalesTaxStrategy.GetTax(this);
+            return strategy.GetTax(this);
         }
     }
 }

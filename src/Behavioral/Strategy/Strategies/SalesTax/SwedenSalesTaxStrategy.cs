@@ -6,18 +6,6 @@ namespace Strategy.Strategies.SalesTax
     {
         public decimal GetTax(Order order)
         {
-            var destination = order.ShippingDetails.DestinationCountry.ToLowerInvariant();
-            var origin = order.ShippingDetails.OriginCountry.ToLowerInvariant();
-            if (destination == origin)
-            {
-                return order.TotalPrice * 0.25m;
-            }
-
-            return 0;
-        }
-
-        public decimal GetTaxForBetter(Order order)
-        {
             decimal totalTax = 0m;
 
             foreach (var item in order.OrderItems)
@@ -41,5 +29,17 @@ namespace Strategy.Strategies.SalesTax
 
             return totalTax;
         }
+
+        // public decimal GetTax(Order order)
+        // {
+        //     var destination = order.ShippingDetails.DestinationCountry.ToLowerInvariant();
+        //     var origin = order.ShippingDetails.OriginCountry.ToLowerInvariant();
+        //     if (destination == origin)
+        //     {
+        //         return order.TotalPrice * 0.25m;
+        //     }
+
+        //     return 0;
+        // }
     }
 }

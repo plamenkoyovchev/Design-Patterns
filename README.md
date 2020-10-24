@@ -14,7 +14,7 @@ Design Patterns with C# and .Net Core examples
 
 ### Builder
 
-### FluentBuilder
+### Fluent Builder
 
 
 ## Structural 

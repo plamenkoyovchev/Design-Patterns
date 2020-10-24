@@ -15,11 +15,21 @@ namespace FluentBuilder
                 new FurnitureItem("Wardrobe", 60m, 100, 65, 20)
             };
 
-            var inventoryBuilder = new InventoryReportBuilder(furnitureItems);
+            // We can bypass the Director class when working with FluentBuilder
+
+            /* var inventoryBuilder = new InventoryReportBuilder(furnitureItems);
             var director = new InventoryReportBuildDirector(inventoryBuilder);
 
             director.BuildReport();
-            var inventoryReport = inventoryBuilder.GetInventoryReport();
+            var inventoryReport = inventoryBuilder.GetInventoryReport(); 
+            */
+
+            var inventoryReportBulder = new InventoryReportBuilder(furnitureItems);
+            var inventoryReport = inventoryReportBulder
+                                                .AddTitle()
+                                                .AddDimensions()
+                                                .AddLogistics(DateTime.Now)
+                                                .GetInventoryReport();
 
             Console.WriteLine(inventoryReport.Debug());
         }

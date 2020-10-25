@@ -2,6 +2,9 @@ using System.Collections.Generic;
 
 namespace FactoryMethod
 {
+    /// <summary>
+    /// An abstract 'Creator' class
+    /// </summary>
     public abstract class DocumentCreator
     {
         public DocumentCreator()

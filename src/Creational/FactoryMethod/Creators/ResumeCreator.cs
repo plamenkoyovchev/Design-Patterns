@@ -1,6 +1,6 @@
 ﻿namespace FactoryMethod
 {
-    public class ResumeFactory : DocumentFactory
+    public class ResumeCreator : DocumentCreator
     {
         // Factory Method implementation
         public override void CreatePages()

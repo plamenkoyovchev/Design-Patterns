@@ -2,9 +2,9 @@
 
 namespace FactoryMethod
 {
-    public abstract class DocumentFactory
+    public abstract class DocumentCreator
     {
-        public DocumentFactory()
+        public DocumentCreator()
         {
             this.CreatePages();
         }

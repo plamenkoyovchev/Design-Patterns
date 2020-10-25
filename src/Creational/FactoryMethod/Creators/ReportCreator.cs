@@ -1,6 +1,6 @@
 ﻿namespace FactoryMethod
 {
-    public class ReportFactory : DocumentFactory
+    public class ReportCreator : DocumentCreator
     {
         // Factory Method implementation
         public override void CreatePages()

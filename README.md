@@ -10,7 +10,9 @@ Design Patterns with C# and .Net Core examples
 
 ### Abstract Factory
 
-### Factory
+### Factory Method
+
+    
 
 ### Builder
 

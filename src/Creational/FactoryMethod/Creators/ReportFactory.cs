@@ -1,9 +1,6 @@
 ﻿namespace FactoryMethod
 {
-    /// <summary>
-    /// A 'Concrete Creator' class
-    /// </summary>
-    public class ReportCreator : DocumentCreator
+    public class ReportFactory : DocumentFactory
     {
         // Factory Method implementation
         public override void CreatePages()

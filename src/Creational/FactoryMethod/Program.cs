@@ -6,13 +6,13 @@ namespace FactoryMethod
     {
         static void Main()
         {
-            var documents = new DocumentCreator[]
+            var documents = new DocumentFactory[]
             {
-                new ResumeCreator(),
-                new ReportCreator()
+                new ResumeFactory(),
+                new ReportFactory()
             };
 
-            foreach (DocumentCreator document in documents)
+            foreach (DocumentFactory document in documents)
             {
                 Console.WriteLine("\n" + document.GetType().Name + "--");
                 foreach (Page page in document.Pages)

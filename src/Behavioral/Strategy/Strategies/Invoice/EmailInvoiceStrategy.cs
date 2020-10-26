@@ -11,7 +11,7 @@ namespace Strategy.Strategies.Invoice
 
             // TODO: code send email (SmtpClient maybe with SendGrid)
 
-            Console.WriteLine("Email sent ... ");
+            Console.WriteLine($"Email sent ... \n Body: {body}");
         }
     }
 }
